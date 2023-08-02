@@ -27,6 +27,7 @@ return {
   {
     "ggandor/leap.nvim",
     keys = false,
+    enabled = true,
     config = function(_, opts)
       -- add your own keymaps here
       vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward-to)", { desc = "leap-forward-to" })
