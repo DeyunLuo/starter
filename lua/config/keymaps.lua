@@ -25,10 +25,11 @@ vim.keymap.set("n", "Q", "<cmd>q<cr>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>s", "<cmd>w<cr><esc>", { desc = "Save" })
 vim.keymap.set("n", "S", "<cmd>w<cr><esc>", { desc = "Save" })
 vim.keymap.set("n", "<leader>fm", require("lazyvim.plugins.lsp.format").format, { desc = "Format" })
-vim.keymap.del("n", "<leader><space>")
+-- vim.keymap.del("n", "<leader><space>")
+
 -- vim.keymap.del("n", "S")
 
-vim.keymap.set("n", "<leader><space>", explorer, { desc = "Format" })
+-- vim.keymap.set("n", "<leader><space>", explorer, { desc = "Format" })
 
 vim.keymap.set("n", "<leader>t", open_terminal, { desc = "Terminal (cwd)" })
 vim.keymap.del("n", "<leader>/")
