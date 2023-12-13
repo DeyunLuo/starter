@@ -23,8 +23,10 @@ vim.keymap.set("n", "<leader>;c", "<cmd>e $MYVIMRC<cr>", { desc = "Open vimrc" }
 vim.keymap.set("n", "<leader>r", "<cmd>source $MYVIMRC<cr>", { desc = "reload vimrc" })
 vim.keymap.set("n", "Q", "<cmd>q<cr>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>s", "<cmd>w<cr><esc>", { desc = "Save" })
+vim.keymap.set("n", "S", "<cmd>w<cr><esc>", { desc = "Save" })
 vim.keymap.set("n", "<leader>fm", require("lazyvim.plugins.lsp.format").format, { desc = "Format" })
 vim.keymap.del("n", "<leader><space>")
+-- vim.keymap.del("n", "S")
 
 vim.keymap.set("n", "<leader><space>", explorer, { desc = "Format" })
 
@@ -35,7 +37,7 @@ vim.keymap.set("n", "H", "<C-w>h", { desc = "Go to left window", remap = true })
 vim.keymap.set("n", "J", "<C-w>j", { desc = "Go to lower window", remap = true })
 vim.keymap.set("n", "K", "<C-w>k", { desc = "Go to upper window", remap = true })
 vim.keymap.set("n", "L", "<C-w>l", { desc = "Go to right window", remap = true })
-vim.keymap.set({ "i", "v", "n", "s" }, "S", "<cmd>w<cr><esc>", { desc = "Save file" })
+-- vim.keymap.set({ "i", "v", "n", "s" }, "S", "<cmd>w<cr><esc>", { desc = "Save file" })
 
 vim.keymap.set("n", "<TAB>", "<cmd> BufferLineCycleNext <CR>", { desc = "Change Tab next" })
 vim.keymap.set("n", "<S-Tab>", "<cmd> BufferLineCyclePrev <CR>", { desc = "Change Tab Pre" })
