@@ -3,15 +3,15 @@
 -- Add any additional keymaps here
 -- Explorer NeoTree function
 local Util = require("lazyvim.util")
-local explorer = function()
-  require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
-  -- Util.telescope("files", { cwd = false })
-end
+-- local explorer = function()
+--   require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
+--   -- Util.telescope("files", { cwd = false })
+-- end
 local open_dashboard = function()
   vim.cmd("Alpha")
 end
 local open_terminal = function()
-  Util.float_term()
+  Util.terminal.open()
 end
 
 local close_buffer = function()
@@ -24,7 +24,8 @@ vim.keymap.set("n", "<leader>r", "<cmd>source $MYVIMRC<cr>", { desc = "reload vi
 vim.keymap.set("n", "Q", "<cmd>q<cr>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>s", "<cmd>w<cr><esc>", { desc = "Save" })
 vim.keymap.set("n", "S", "<cmd>w<cr><esc>", { desc = "Save" })
-vim.keymap.set("n", "<leader>fm", require("lazyvim.plugins.lsp.format").format, { desc = "Format" })
+-- vim.keymap.set("n", "<leader>fm", require("lazyvim.plugins.lsp.format").format, { desc = "Format" })
+vim.keymap.set("n", "<leader>fm", Util.lsp.format, { desc = "Format" })
 -- vim.keymap.del("n", "<leader><space>")
 
 -- vim.keymap.del("n", "S")
