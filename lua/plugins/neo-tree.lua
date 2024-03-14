@@ -19,6 +19,8 @@ return {
           show_hidden_count = true,
           hide_dotfiles = false,
           hide_gitignored = true,
+          enable_git_status = true,
+          enable_diagnostics = true,
           hide_by_name = {
             ".git",
             ".DS_Store",

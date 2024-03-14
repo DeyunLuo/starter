@@ -21,12 +21,13 @@ end
 vim.keymap.set("n", "<leader>;", open_dashboard, { desc = "Open dashboard" })
 vim.keymap.set("n", "<leader>;c", "<cmd>e $MYVIMRC<cr>", { desc = "Open vimrc" })
 vim.keymap.set("n", "<leader>r", "<cmd>source $MYVIMRC<cr>", { desc = "reload vimrc" })
-vim.keymap.set("n", "Q", "<cmd>q<cr>", { desc = "Quit" })
+-- vim.keymap.set("n", "Q", "<cmd>q<cr>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>s", "<cmd>w<cr><esc>", { desc = "Save" })
 vim.keymap.set("n", "S", "<cmd>w<cr><esc>", { desc = "Save" })
 -- vim.keymap.set("n", "<leader>fm", require("lazyvim.plugins.lsp.format").format, { desc = "Format" })
 vim.keymap.set("n", "<leader>fm", Util.lsp.format, { desc = "Format" })
 vim.keymap.set("n", "<leader>..", "<cmd>Neotree ..<cr>", { desc = "Go parent dir" })
+vim.keymap.set("n", "<leader>h", "<cmd>set nohlsearch <cr>", { desc = "Set nohlsearch" })
 
 -- vim.keymap.set("n", "<leader><space>", explorer, { desc = "Format" })
 
@@ -42,6 +43,7 @@ vim.keymap.set("n", "L", "<C-w>l", { desc = "Go to right window", remap = true }
 vim.keymap.set("n", "<TAB>", "<cmd> BufferLineCycleNext <CR>", { desc = "Change Tab next" })
 vim.keymap.set("n", "<S-Tab>", "<cmd> BufferLineCyclePrev <CR>", { desc = "Change Tab Pre" })
 vim.keymap.set("n", "<leader>x", close_buffer, { desc = "Delete Buffer" })
+vim.keymap.set("n", "Q", close_buffer, { desc = "Delete Buffer" })
 
 --
 vim.keymap.set("n", "<UP>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
