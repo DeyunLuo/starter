@@ -28,7 +28,6 @@ vim.keymap.set("n", "S", "<cmd>w<cr><esc>", { desc = "Save" })
 vim.keymap.set("n", "<leader>fm", Util.lsp.format, { desc = "Format" })
 vim.keymap.set("n", "<leader>..", "<cmd>Neotree ..<cr>", { desc = "Go parent dir" })
 vim.keymap.set("n", "<leader>h", "<cmd>set nohlsearch <cr>", { desc = "Set nohlsearch" })
-
 -- vim.keymap.set("n", "<leader><space>", explorer, { desc = "Format" })
 
 vim.keymap.set("n", "<leader>t", open_terminal, { desc = "Terminal (cwd)" })
