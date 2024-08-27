@@ -1,6 +1,7 @@
 {
   "extras": [
-
+    "lazyvim.plugins.extras.coding.codeium",
+    "lazyvim.plugins.extras.lang.go"
   ],
   "news": {
     "NEWS.md": "6520"

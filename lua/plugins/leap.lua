@@ -1,11 +1,14 @@
 return {
   -- disable flash
-  { "folke/flash.nvim", enabled = false, optional = true },
+  {
+    "folke/flash.nvim",
+    enabled = true,
+  },
 
   -- easily jump to any location and enhanced f/t motions for Leap
   {
     "ggandor/flit.nvim",
-    enabled = true,
+    enabled = false,
     keys = function()
       ---@type LazyKeys[]
       local ret = {}
@@ -18,7 +21,7 @@ return {
   },
   {
     "ggandor/leap.nvim",
-    enabled = true,
+    enabled = false,
     keys = false,
     -- close S key to use S to save file
     -- keys = {
@@ -34,8 +37,8 @@ return {
       leap.add_default_mappings(true)
       vim.keymap.del({ "x", "o" }, "x")
       vim.keymap.del({ "x", "o" }, "X")
-      -- vim.keymap.del({ "x", "o", "n" }, "S")
     end,
+    -- vim.keymap.del({ "x", "o", "n" }, "S")
   },
 
   -- makes some plugins dot-repeatable like leap
