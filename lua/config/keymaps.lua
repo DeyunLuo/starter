@@ -11,13 +11,18 @@ local open_dashboard = function()
   vim.cmd("Alpha")
 end
 local open_terminal = function()
-  Util.terminal.open()
+  Snacks.terminal(nil, { win = { position = "float" } })
 end
 
 local close_buffer = function()
   -- require("mini.bufremove").delete(0, false)
-  Util.ui.bufremove(0)
+  -- Util.ui.bufremove(0)
+  Snacks.bufdelete()
 end
+
+-- local neovim_accept = function()
+--   -- require("neocodeium").accept()
+-- end
 
 vim.keymap.set("n", "<leader>;", open_dashboard, { desc = "Open dashboard" })
 vim.keymap.set("n", "<leader>;c", "<cmd>e $MYVIMRC<cr>", { desc = "Open vimrc" })
@@ -29,6 +34,7 @@ vim.keymap.set("n", "<leader>..", "<cmd>Neotree ..<cr>", { desc = "Go parent dir
 vim.keymap.set("n", "<leader>h", "<cmd>set nohlsearch <cr>", { desc = "Set nohlsearch" })
 -- vim.keymap.set("n", "<leader><space>", explorer, { desc = "Format" })
 
+-- vim.keymap.set("i", "<C-f>f", neovim_accept)
 vim.keymap.set("n", "<leader>t", open_terminal, { desc = "Terminal (cwd)" })
 vim.keymap.del("n", "<leader>/")
 vim.keymap.set("n", "H", "<C-w>h", { desc = "Go to left window", remap = true })
