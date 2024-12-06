@@ -11,12 +11,13 @@ local open_dashboard = function()
   vim.cmd("Alpha")
 end
 local open_terminal = function()
-  Util.terminal.open()
+  Snacks.terminal(nil, { win = { position = "float" } })
 end
 
 local close_buffer = function()
   -- require("mini.bufremove").delete(0, false)
-  Util.ui.bufremove(0)
+  -- Util.ui.bufremove(0)
+  Snacks.bufdelete()
 end
 
 local neovim_accept = function()
